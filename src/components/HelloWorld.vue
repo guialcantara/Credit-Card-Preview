@@ -75,14 +75,15 @@ export default {
 <style scoped lang="scss">
 #card-page {
   display: flex;
-  align-items: stretch;
   height: 100vh;
-
+  overflow: hidden;
+  background-image: url("../assets/bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
   aside {
     display: flex;
     flex: 1;
     padding: 0 32px;
-    background: red;
     align-items: center;
     justify-content: center;
   }
@@ -93,7 +94,6 @@ export default {
     padding: 0 32px;
     align-items: center;
     justify-content: center;
-
     .card-container {
       position: relative;
       background-color: transparent;
@@ -126,14 +126,15 @@ export default {
         }
 
         p {
-          width: 400px;
+          min-width: 360px;
+          max-width: 360px;
+          text-align: left;
           position: absolute;
           color: white;
           top: 80%;
-          left: -100px;
+          left: 25px;
           font-weight: bold;
         }
-        
       }
       .card-back {
         transform: rotateY(180deg) rotate(-25deg) skew(15deg, 0deg);
